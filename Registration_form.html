@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Форма регистрации</title>
+       <meta charset="utf-8"></meta>
+    </head>
+    <body>
+        <h1>Формы</h1>
+        <form>
+            <fieldset>
+                <legend>Идентификация</legend>
+            <label for="yourname">Ваше имя:</label><br>
+            <input type="text" name ="name" id ="yourname"><br>
+            <label for="pass">Пароль:</label></br>
+            <input type="password" name="password" id="pass"><br>
+            <label for="emailaddress">Почта:</label><br>
+            <input type="text" name ="email" id ="emailaddress"><br>
+            </fieldset>  
+
+             <fieldset>
+             <legend>Личная информация</legend>
+             <label>Дата рождения<br><input type="date"></label><br>
+             <p>Пол
+            <label><input type="radio" name="radio" value="radio1">М</label>
+            <label><input type="radio" name="radio" value="radio2">Ж</label><br>
+            <br>
+                <label for="sel">Языки</label>
+                <select id="sel">
+                    <option>English</option>
+                    <option>Українська</option>
+                    <option>Русский</option>
+                </select>
+            <br><br><label for="textarea-field">Хобби:</label><br>
+            <textarea name="textarea" id="textarea-field" rows="4" cols="40"></textarea>
+            
+            <br><input type="checkbox" name="checkbox" id="checkbox-field" checked> Подписаться на рассылку<br>
+       </fieldset> 
+       <br> <input type="submit" id="submit-field" value="Отправить">  
+       
+       
+        </form>
+    </body>
+</html>
