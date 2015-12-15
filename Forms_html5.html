@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Форма регистрации</title>
+       <meta charset="utf-8"></meta>
+    </head>
+    <body>
+        <h1>Формы</h1>
+        <form>
+            <fieldset>
+                <legend>Идентификация</legend>
+            <label for="yourname">Ваше имя</label><br>
+            <input type="text" name ="name" id ="yourname"><br>
+            <label for="pass">Пароль:</label></br>
+            <input type="password" name="password" id="pass"><br>
+            <div><label>Почта<br><input type="email" pattern="\S+@\S+\.\S+" placeholder="name@host.com" multiple list="maillist"></label>
+  
+        </div>
+        <datalist id="maillist">          
+            <option value="aaa@bbb.ccc"></option>
+            <option value="aaa@ccc.ddd"></option>
+            <option value="bbb.fff@eee.ggg"></option>
+        </datalist>
+            </fieldset>  
+             <fieldset>
+             <legend>Личная информация</legend>
+             <div><label>Дата рождения <br><input type="datetime-local"></label></div>
+             <br><input type="number" max="120" step="1" placeholder="Количество полных лет"/>
+             <p>Пол
+            <label><input type="radio" name="radio" value="radio1">М</label>
+            <label><input type="radio" name="radio" value="radio2">Ж</label><br><br>
+                <label for="sel">Языки</label>
+                <select id="sel">
+                    <option>English</option>
+                    <option>Українська</option>
+                    <option>Русский</option>
+                </select>
+            <br><br><label for="textarea-field">Хобби:</label><br>
+            <textarea name="textarea" id="textarea-field" rows="4" cols="40"></textarea>
+            <div><label>Выберите цвет <input type="color"></label></div><br>
+            <div><label>Телефон <input type="tel" pattern="\+{1}\d{3}\(\d{2,4}\)\d{5,7}" value="+380()"></div>
+            <br>
+            <div><label><br>Ваш сайт <input type="url">
+            <br><br><input type="checkbox" name="checkbox" id="checkbox-field" checked> Подписаться на рассылку
+            </fieldset> 
+       <br> <input type="submit" id="submit-field" value="Отправить">  
+        </form>
+    </body>
+</html>
