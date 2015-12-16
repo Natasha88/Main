@@ -1,0 +1,95 @@
+@position: relative;
+@position_mask: absolute;
+@aside_color: #ADFF2F;
+@color: #aaa;
+@height: 100%;
+@width: 100%;
+@float: left;
+@text: justify;
+@padding: 0;
+
+		* {
+			margin: 0;
+			padding: @padding;        
+		}
+		body, html {
+			height: @height;
+			font-size: 14px;
+		}
+		.wrapper {
+			height: @height;
+			position: @position;
+		}
+		.header, .footer, .nav, .content { 
+			margin: 0 auto;
+			padding: @padding;
+		}
+
+		.header {
+			background: @color;
+			width: @width;
+			min-height: @height - 88%;
+		 div {
+			position: @position;
+			top: 30%;
+		}
+	}
+		.nav {
+			background: lighten(@color, 10%);
+			width: @width;
+			height: @height - 94%; 
+		}
+		.side_button {
+			display: none;
+		}
+		.content {
+			position: @position;
+			width: @width - 30%;
+			min-height: @height;
+			background: lighten(@color, 25%);
+		}
+		.mask(@left; @width_mask;) {
+			position: @position_mask;
+			height: @height;
+			background: @aside_color;
+			left: @left;
+			width: @width_mask;
+		}
+		.left-mask {
+			.mask(0; 20%);
+		}
+		.middle-mask {
+			.mask(20%; 60%);
+			background: transparent;
+		}
+		.right-mask {
+			.mask(80%; 20%);	
+		}
+		.block(@width_block) {
+			text-align: @text;
+			position: @position;
+			float: @float;
+			padding: @padding + 1%;
+			height: @height;
+			width: @width_block;
+		}
+		.left-block {
+			.block(18%);
+
+		}
+		.middle-block {
+			.block(58%);
+			
+		}
+		.right-block {
+			.block(18%);
+		
+		}
+		.cb {
+			clear: both;
+		}
+		.footer {
+			height: @height - 93%;
+			width: @width;
+			background: darken(@color, 10%);
+		}
