@@ -33,7 +33,7 @@
 			position: @position;
 			top: 30%;
 		}
-	}
+		}
 		.nav {
 			background: lighten(@color, 10%);
 			width: @width;
@@ -48,10 +48,10 @@
 			min-height: @height;
 			background: lighten(@color, 25%);
 		}
-		.mask(@left; @width_mask;) {
+		.mask(@left; @width_mask; @color: @aside_color;) {
 			position: @position_mask;
 			height: @height;
-			background: @aside_color;
+			background: @color;
 			left: @left;
 			width: @width_mask;
 		}
@@ -59,8 +59,7 @@
 			.mask(0; 20%);
 		}
 		.middle-mask {
-			.mask(20%; 60%);
-			background: transparent;
+			.mask(20%; 60%; transparent);
 		}
 		.right-mask {
 			.mask(80%; 20%);	
