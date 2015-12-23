@@ -1,0 +1,67 @@
+.hdr-ftr {
+  background: lightcoral;
+  padding: 40px 150px;
+  color: white;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+* html .page-wrapper {
+  height: 100%;
+}
+.page-buffer {
+  height: 70px;
+}
+header {
+  background: lightcoral;
+  padding: 40px 150px;
+  color: white;
+  box-sizing: border-box;
+}
+header .logo {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  float: left;
+}
+header .logo:hover {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+header .menu {
+  float: right;
+  margin: 0;
+}
+header .menu .label-menu {
+  font-size: 20px;
+}
+header .menu .sel-menu {
+  border: 1px solid white;
+  padding: 5px 30px;
+  margin-left: 15px;
+}
+header .menu .sel-menu .menu_color_3 {
+  background: #99ff33;
+}
+header .menu .sel-menu .menu_color_2 {
+  background: #ffff33;
+}
+header .menu .sel-menu .menu_color_1 {
+  background: #ff9933;
+}
+footer {
+  background: lightcoral;
+  padding: 40px 150px;
+  color: white;
+  box-sizing: border-box;
+}
