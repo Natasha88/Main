@@ -51,6 +51,7 @@
 			}
 			.header {
 				width: 100%;
+				box-sizing: border-box;
 				background-image: url("https://pp.vk.me/c631323/v631323018/9c0/EmuVh7rRhSU.jpg");
 				background-repeat: no-repeat;
 				background-position: 100% 100%;
@@ -58,12 +59,11 @@
 				opacity: 0.8;
 				font-family: 'Pinyon Script', cursive;
 				color: white;
-				margin: 0 auto;
 				font-size: 70px;
 				font-weight: bold; 
 				text-align: center;
-				height: 17%;
-				padding: 1em 5%;
+				height: 35%;
+				padding: 1em;
 			}
 			.audio {
 				visibility: hidden;
@@ -135,7 +135,7 @@
 				visibility: visible;
 				display: block;
 				opacity: 1;	
-				transition: margin 0.3s ease 0s;
+				transition: all 0.5s ease;
 			}
 			.dropdown li:hover {
 				background-color: #EEE8AA;
@@ -178,7 +178,6 @@
 				font-size: 107%;
 			}
 			.article {
-				display: block;
 				position: relative;
 				float: left;
 				font-size: 14px;
@@ -210,7 +209,6 @@
 				background: white;
 			}
 			.social {
-				display: block;
 				position: relative;
 				float: right;
 				margin: 2px;
@@ -244,16 +242,14 @@
 			}
 
 			.footer {
-  				left: 0;
-  				bottom: 0;
 				background-color:#DCDCDC;
 				width: 100%;
+				box-sizing: border-box;
 				padding: 10px;
 				height: auto;
 				text-align: center;
 				font-size: 12px;
-			    font-style: oblique;
-			 	clear: both;
+				font-style: oblique;
 			}
 
 
