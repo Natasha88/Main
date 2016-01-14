@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab#3 </title>
+		<script>
+			var score;
+			for (i = 0; i < 5; i++) {
+				score = prompt("Enter your score");
+				if (isNaN(parseInt(score)) || score > 100 || score < 0) {
+					alert("Your input does not match the criteria, please enter a number between 0 and 100 inclusive.");
+				} else if (score >= 60) {
+					alert("Well done! You have passed.")
+				} else break;
+			} 
+
+			do { 
+				x = parseInt(prompt("Enter x"));
+				y = parseInt(prompt("Enter y"));
+				func = prompt("What function to perform?: 1. Addition, 2. Subtraction, 3. Multiplication 4. Division.");   
+			 if (func == "Addition" || func == "+" || func == 1) {
+				result=x+y;
+				alert(result);
+			} else if (func == "Subtraction" || func == "-" || func == 2) {
+				result=x-y;
+				alert(result);
+			} else if (func == "Multiplication" || func == "*" || func == 3) {
+				result=x*y;
+				alert(result);
+			} else if (func == "Division" || func == "/" || func == 4) {
+				result=x/y;
+				alert(result);
+		    } i =  prompt("Do you want to continue?");
+		     if (i == "yes") continue;
+		     else if (i == "no") break;
+		} while (i != "That's all"); 
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
