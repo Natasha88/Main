@@ -7,7 +7,7 @@
 
 		 // 1. в алфавитном порядке по производителю
 
-		var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+		var cars = [["Nissan", "Qashqai", "2012"], ["Volkswagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
 		 	function foo1(a,b) {
  				if (a[0]<b[0]) return -1;
 				if (a[0]>b[0]) return 1;
@@ -17,7 +17,7 @@
 
 			// 2. в алфавитном порядке по модели
 			
-			var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+			var cars = [["Nissan", "Qashqai", "2012"], ["Volkswagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
 			function foo2(a,b) {
  				if (a[1]<b[1]) return -1;
 				if (a[1]>b[1]) return 1;
@@ -27,7 +27,7 @@
 
 			// 3. в обратном алфавитном порядке по производиелю
 
-			var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+			var cars = [["Nissan", "Qashqai", "2012"], ["Volkswagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
 			function foo3(a,b) {
  				if (b[0]<a[0]) return -1;
 				if (b[0]>a[0]) return 1;
@@ -37,7 +37,7 @@
 
 			// 4. по году выпуска по возрастанию
 
-			var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+			var cars = [["Nissan", "Qashqai", "2012"], ["Volkswagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
 			cars.sort(function(a,b) {
 				return a[2] - b[2]; 
 			});
@@ -45,7 +45,7 @@
 
 			// 5. по году выпуска по убыванию
 
-			var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+			var cars = [["Nissan", "Qashqai", "2012"], ["Volkswagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
 		    cars.sort(function(a,b) {
 				return b[2] - a[2]; 
 			});
