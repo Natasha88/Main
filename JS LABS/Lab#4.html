@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Func</title>
+		<script> 
+
+		var cars = [];
+			for(var i = 0; i < 5; i++) {
+  			cars.push({
+    		FirmName: prompt("Enter car's name."),
+			ModelName: prompt("Enter car's model."),
+			EngineDisplacement: parseFloat(prompt("Enter car's engine displacemant"))
+  				});
+  			if (cars[i].EngineDisplacement > 2.0) {
+  			 document.write("Car's name: " + cars[i].FirmName + "</br>" + " Car's model: " + cars[i].ModelName + "</br>" + " Car's engine displacement: " + cars[i].EngineDisplacement + "</br>" + "</br>");
+  			}   
+		}
+
+</script>
+	</head>
+	<body>
+	</body>
+</html>
