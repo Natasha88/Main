@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Func</title>
+		<script> 
+
+		 // 1. в алфавитном порядке по производителю
+
+		var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+		 	function foo1(a,b) {
+ 				if (a[0]<b[0]) return -1;
+				if (a[0]>b[0]) return 1;
+				return 0;
+				}
+			console.log(cars.sort(foo1));
+
+			// 2. в алфавитном порядке по модели
+			
+			var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+			function foo2(a,b) {
+ 				if (a[1]<b[1]) return -1;
+				if (a[1]>b[1]) return 1;
+				return 0;
+				}
+			console.log(cars.sort(foo2));
+
+			// 3. в обратном алфавитном порядке по производиелю
+
+			var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+			function foo3(a,b) {
+ 				if (b[0]<a[0]) return -1;
+				if (b[0]>a[0]) return 1;
+				return 0;
+				}
+			console.log(cars.sort(foo3)); 
+
+			// 4. по году выпуска по возрастанию
+
+			var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+			cars.sort(function(a,b) {
+				return a[2] - b[2]; 
+			});
+			console.log(cars);
+
+			// 5. по году выпуска по убыванию
+
+			var cars = [["Nissan", "Qashqai", "2012"], ["Volkwagen", "Golf", "2005"], ["Audi", "A1", "2010"]];
+		    cars.sort(function(a,b) {
+				return b[2] - a[2]; 
+			});
+			console.log(cars);
+
+</script>
+	</head>
+	<body>	
+	</body>
+</html>
