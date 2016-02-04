@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Geting Age and validation thereof</title>
+		<script>
+
+		// Ошибка
+
+			function Errors(a, b) {
+				if ( isNaN(a) || typeof a == "Number") throw new Error("'a' should be a number");
+				else if  ( isNaN(b) || typeof b == "Number") throw new Error("'b' should be a number");
+				return parseInt(a) + parseInt(b);
+				}
+
+			Errors(prompt("enter a"), prompt("enter b"));
+
+		// функция, которая возвращает возраст человека
+
+		function getAge(birthdate) {
+			var message;
+			var bdate = new Date(birthdate);
+			var today = new Date();
+			var age = today.getFullYear() - bdate.getFullYear();
+			var mth = today.getMonth();
+			var bmth = bdate.getMonth();
+			// var rxDate = bdate.match(/(\d{4})[-\/,](\d{2})[-\/,](\d{2})/);
+			if (mth - bmth < 0 ) {age--}
+			else if ((mth-bmth== 0) && (today.getDate() - bdate.getDate() < 0)) {age--};
+			try {
+				if(isNaN(bdate) || typeof bdate == "Number" || bdate == "") throw "is invalid or empty";
+				else if (bdate.getTime() > today.getTime()) throw "is too high. Person isn't born yet.";
+				// else if (rxDate === null ) throw "is not in a valid format.";
+				console.log(age);
+					}
+			catch(err) {
+				message = "Input " + err;
+				console.log(message);
+				}
+
+			};
+
+			getAge(prompt("Enter your birth date in YYYY/MM/DD format",""));
+
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>
