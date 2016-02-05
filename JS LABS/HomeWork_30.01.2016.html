@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>cash register</title>
+		<script>
+
+		// Создание рамндомного двумерного массива
+
+		function CreateRandomArray(a,c) {
+			var arr = [];
+			for (i = 0; i < a; i++) {
+				arr[i] = [];
+				for (j = 0; j < c; j++) {
+				arr[i].push(Math.round(Math.random() * 100));
+				}	 
+			}
+		return arr;
+	}
+			array = CreateRandomArray;
+			console.log(array(5,5));
+
+		// Фунцкия, сортирующая массив на количеству целочисленных делителей
+
+		function SortingArray (w, q) {
+					var c = 0, d = 0;
+					for (var i=2;i < w; i++) {
+						if (w%i === 0) {
+							c++;
+						}
+					}
+					for (var j= 2; j <q; j++) {
+						d++;
+						if (c === d) {
+							return 0;
+						} else if ( c > d) {
+							return 1; 
+						} else { 
+							return -1;
+
+						}
+					}
+				}
+
+
+
+		// Функция, которая убирает лишние пробелы из строки
+
+
+		var strOdd = "string    string    string string          string string     string";
+
+		function OddTab(str) {
+			console.log(str.replace(/[\s{2,}]+/g, ' '));
+		};
+
+		OddTab(strOdd);
+
+		// изменить сообщение, при этом обновляя дату
+
+		function Comment (name, massage, date) {
+			this.name = name;
+			this.massage = massage;
+			this.date = date;
+			}
+
+		Comment.prototype.chngMssg = function(newmassage) {
+			if (this.massage = newmassage) {
+			console.log(this.name + " has changed the massage to " + this.massage + " on " + new Date());
+			}
+			}
+
+		var comment = new Comment('John','Hello', new Date(16, 0, 27, 10, 43, 34));
+		var comment2 = new Comment('Natasha','nice!', new Date(16, 0, 27, 11, 21, 45));
+		var comment3 = new Comment('Jane','no way!!11', new Date(16, 1, 2, 22, 5, 5));
+
+		comment.chngMssg("Hi");
+		comment2.chngMssg("Look");
+		comment3.chngMssg("wow");
+
+
+		// изменить сообщение, при этом обновляя дату 2
+
+		var Post = function  (header, message) {
+			var date = new Date();
+			this.header = header;
+			this.message - message;
+			Object.defineProperty(this, "date", {
+				get: function () {
+					return date.toString();
+				},
+				set: function () {
+					if (!dateArg) {
+						date = new Date();
+					} else {
+						date = new Date(dateArg);
+					}
+				}
+			});
+		}
+
+		 var firstPost = new Post("Hello", " World!!");
+			console.log(firstPost.date);
+			(function () {
+			firstPost.date = "";
+			console.log(firstPost.date);
+			}, 2345);
+			setTimeout(function () {
+			firstPost.date = "2011, 12, 13";
+			console.log(firstPost.date);
+			}, 2345);
+
+		</script>
+	</head>
+	<body>
+	<br>Press F12 to open DevTools
+	</body>
+</html>
