@@ -34,31 +34,26 @@
 <a href="https://learn.javascript.ru/document"><span>Link 3. </span>Документ и объекты страницы</a>
 
 <script>
-    var link = document.getElementsByTagName("a");
-    var linkNumber = document.getElementsByTagName("span");
-    function getAllLinks() {
-        var num = link.length;
-        console.log("There are " + num + " links in this document:");
+    var links = document.getElementsByTagName("a");
+    var spans = document.getElementsByTagName("span");
+
+    function getTags(tag, tagname) {
+        var num = tag.length;
+        if (num > 1) {
+        console.log("There are " + num +" " + tagname + "s" + " in this document:");
+        } else console.log("There is " + num +" " + tagname +  " in this document:");
     };
-    function getAllSpans() {
-        var num = linkNumber.length;
-        console.log("There are " + num + " spans in this document:");
-    };
-    function logAllLinks() {
-        for (i = 0, len = link.length; i < len; i++ ) {
-            console.log(link[i]);
-        }
-    };
-    function logAllSpans() {
-        for (i = 0, len1 = linkNumber.length; i < len1; i++) {
-            console.log(linkNumber[i]);
+
+    function logTag(tag) {
+        for (var i = 0, len = tag.length; i < len; i++ ) {
+            console.log(tag[i]);
         }
     };
 
-    getAllLinks();
-    logAllLinks();
-    getAllSpans();
-    logAllSpans();
+    getTags(links, "link");
+    logTag(links);
+    getTags(spans, "span");
+    logTag(spans);
 
 </script>
 
