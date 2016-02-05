@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab#1</title>
+    <style>
+        a:link {
+            font-size: 18px;
+            color: #1EAE2D;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #0AD121;
+
+        }
+        a:hover {
+            color:#1FB22F;
+            font-size: 19px;
+        }
+        a:active {
+            color: #1EAE2D;
+        }
+        span {
+            color: #0B9D1C;
+        }
+    </style>
+
+</head>
+<body>
+<a href="https://en.wikipedia.org/wiki/Document_Object_Model"><span>Link 1. </span>Document Object Model (DOM)</a><br>
+
+<a href="http://www.w3schools.com/js/js_htmldom_nodes.asp"><span>Link 2. </span>JavaScript HTML DOM Elements (Nodes)</a><br>
+
+<a href="https://learn.javascript.ru/document"><span>Link 3. </span>Документ и объекты страницы</a>
+
+<script>
+    var link = document.getElementsByTagName("a");
+    var linkNumber = document.getElementsByTagName("span");
+    function getAllLinks() {
+        var num = link.length;
+        console.log("There are " + num + " links in this document:");
+    };
+    function getAllSpans() {
+        var num = linkNumber.length;
+        console.log("There are " + num + " spans in this document:");
+    };
+    function logAllLinks() {
+        for (i = 0, len = link.length; i < len; i++ ) {
+            console.log(link[i]);
+        }
+    };
+    function logAllSpans() {
+        for (i = 0, len1 = linkNumber.length; i < len1; i++) {
+            console.log(linkNumber[i]);
+        }
+    };
+
+    getAllLinks();
+    logAllLinks();
+    getAllSpans();
+    logAllSpans();
+
+</script>
+
+</body>
+</html>
