@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13.02.16</title>
+    <style>
+        .button {
+            height: 30px;
+            width: 80px;
+            background-color: lawngreen;
+            color: darkblue;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 20px 90px;
+
+        }
+
+        .active {
+            display: none;
+            background-image: url("https://az31353.vo.msecnd.net/pub/aucwfwzc");
+            background-repeat: no-repeat;
+            width: 300px;
+            height:300px;
+            background-size: 100%;
+            transition: all 1s linear;
+
+        }
+        .hidden {
+            display: block;
+            /*background-image: url("http://s2.uploads.ru/t/Hq2Km.png");*/
+            /*background-repeat: no-repeat;*/
+            /*width: 300px;*/
+            /*height:300px;*/
+            /*background-size: 100%;*/
+            transition: top 1s linear;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<button class="button">Click</button>
+<div class="active"></div>
+
+
+<script>
+
+    var el = document.querySelector(".button");
+    el2 = document.querySelector(".active");
+
+    var clickButton = function(e) {
+        el2.classList.toggle("hidden");
+    };
+    el.addEventListener("click", clickButton);
+
+</script>
+
+</body>
+</html>
