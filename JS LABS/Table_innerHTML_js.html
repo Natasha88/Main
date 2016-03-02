@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            border: 1px solid black;
+            padding: 10px 50px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn">Create a Table</button><br><br>
+
+<table id="container">
+
+</table>
+
+<script>
+
+    var btn = document.getElementById("btn");
+
+    var col = "";
+    var row = "";
+
+    var table = document.getElementById("container");
+    var tableRow = function (tag, content, cls, attributes) {
+        cls = cls ? "class=\"" : "";
+        return "<" + tag
+                + " class=\""
+                + cls + "\" "
+                + attributes + ">"
+                + content
+                + "</"
+                + tag + ">";
+    };
+
+    var createTable = function () {
+        for (var i = 0; i < 5; i++) {
+            for (var j = 1; j <= 5; j++) {
+                col += tableRow("td", "cell " + j, null, null);
+            }
+            row += tableRow("tr", col, null, null);
+            col ='';
+    }
+        return row;
+    };
+
+    btn.addEventListener("click", function(e) {
+        table.innerHTML = createTable();
+        console.log(e);
+    })
+
+</script>
+</body>
+</html>
